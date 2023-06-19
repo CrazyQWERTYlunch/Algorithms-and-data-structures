@@ -1,13 +1,13 @@
 def heapify(arr, n, i):
-    largest = i # Initialize largest as root
-    l = 2 * i + 1   # left = 2*i + 1
-    r = 2 * i + 2   # right = 2*i + 2
+    largest = i # Инициализация корня дерева
+    left = 2 * i + 1
+    right = 2 * i + 2
   # Проверяем существует ли левый элемент больше корня
-    if l < n and arr[i] < arr[l]:
-        largest = l
+    if left < n and arr[i] < arr[left]:
+        largest = left
 # Cуществует ли правый элемент больше корня
-    if r < n and arr[largest] < arr[r]:
-        largest = r
+    if right < n and arr[largest] < arr[right]:
+        largest = right
 # Заменяем корень, если нужно
     if largest != i:
         arr[i],arr[largest] = arr[largest],arr[i] # свап
